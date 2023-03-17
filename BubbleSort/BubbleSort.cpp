@@ -9,7 +9,7 @@ int n;					// Deklarasi variabel n untuk menyimpan banyaknya elemen pada array
 void input() {			// Procedure untuk input
 	while (true) {		// Looping
 		cout << "masukan banyaknya elemen pada array : ";	// Output pada layar
-		cin >> n		// Input dari pengguna
+		cin >> n;		// Input dari pengguna
 		if (n <= 20)	// Jika n kurang dari atau sama dengan 20
 			break;		// Keluar dari loop
 		else {			// Jika n lebih dari 20
@@ -36,4 +36,24 @@ void display() {	// Procedure untuk menampilkan hasil
 		cout << a[j] << endl;					// Output ke layar
 	}											// Output ke baris kosong
 	cout << endl;
+}
+
+void bubbleSortArray() {	// Procedure untuk mengurutkan array dengan metode bubble sort
+	for (int i = 1; i < n; i++) {			// Looping dengan i dimulai dengan 0 hingga n-1
+		for (int j = 0; j < n - i; j++) {	// Looping dengan j dimulai dari 0 hingga n-1
+			if (a[j] > a[j + 1]) {			// Simpan nilai a[j] ke variabel sementara temp
+				int temp = a[j];			// Assign nilai a[j+1] ke a[j]
+				a[j] = a[j + 1];			// Assign nilai temp ke a[j+1}
+			}
+		}
+	}
+}
+	
+
+
+int main() {	
+	input();			// Memanggil read()
+	bubbleSortArray();	// Memamnggil bubbleSortArray()
+	display();			// Memanggil display()
+	return 0;
 }
